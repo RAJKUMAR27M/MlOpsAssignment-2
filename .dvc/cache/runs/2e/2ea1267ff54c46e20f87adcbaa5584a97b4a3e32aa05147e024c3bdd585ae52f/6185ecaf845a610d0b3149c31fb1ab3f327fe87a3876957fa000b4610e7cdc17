@@ -1,0 +1,15 @@
+cmd: python -c "from src.data_preprocessing import download_dataset, 
+  preprocess_images, split_dataset; download_dataset(); 
+  preprocess_images('data/raw','data/interim',224); 
+  split_dataset('data/interim','data/processed')"
+deps:
+- path: src/data_preprocessing.py
+  hash: md5
+  md5: 624fa4793222619eae909b16d0656f6b
+  size: 6959
+outs:
+- path: data/processed
+  hash: md5
+  md5: d0bc0ae10944c99256a07eaeef7105bc.dir
+  size: 28250
+  nfiles: 20

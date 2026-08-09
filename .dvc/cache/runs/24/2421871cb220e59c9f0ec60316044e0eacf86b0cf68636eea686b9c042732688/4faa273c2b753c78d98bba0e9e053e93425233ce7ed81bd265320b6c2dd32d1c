@@ -1,0 +1,21 @@
+cmd: python src/evaluate.py --data_dir data/processed --model_path 
+  models/cnn_latest.pt --model_name cnn
+deps:
+- path: data/processed
+  hash: md5
+  md5: d0bc0ae10944c99256a07eaeef7105bc.dir
+  size: 28250
+  nfiles: 20
+- path: models/cnn_latest.pt
+  hash: md5
+  md5: 99315247c471234db10c638b49d45a35
+  size: 138677
+- path: src/evaluate.py
+  hash: md5
+  md5: 24d38e7dc3b18a2cf3fcbdb2ab4f49a2
+  size: 3140
+outs:
+- path: artifacts/confusion_matrix.png
+  hash: md5
+  md5: bc652cf2d2522ebd02360872feb32bff
+  size: 16844

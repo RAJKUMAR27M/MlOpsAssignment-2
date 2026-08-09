@@ -1,0 +1,25 @@
+cmd: python src/train.py --epochs 1 --batch_size 4 --lr 0.001 --data_dir 
+  data/processed --model_name cnn
+deps:
+- path: data/processed
+  hash: md5
+  md5: d0bc0ae10944c99256a07eaeef7105bc.dir
+  size: 28250
+  nfiles: 20
+- path: src/model.py
+  hash: md5
+  md5: f5f8b2cd0e7160114cf1ab43c9532153
+  size: 1994
+- path: src/train.py
+  hash: md5
+  md5: 9fa38ac7de35bdfa56b372a055085a81
+  size: 4216
+outs:
+- path: artifacts/loss_curves.png
+  hash: md5
+  md5: ee9e48296835e8efbbf38be3910063b3
+  size: 12639
+- path: models/cnn_latest.pt
+  hash: md5
+  md5: 99315247c471234db10c638b49d45a35
+  size: 138677
